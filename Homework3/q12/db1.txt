@@ -1,0 +1,41 @@
+CREATE TABLE messages (
+  message varchar(100) NOT NULL,
+  date date NOT NULL,
+  message_id int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (message_id)
+)
+
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| message    | varchar(100) | NO   |     | NULL    |                |
+| date       | date         | NO   |     | NULL    |                |
+| message_id | int          | NO   | PRI | NULL    | auto_increment |
++------------+--------------+------+-----+---------+----------------+
+
++------------------------------------------------------------------------------------------------------+------------+------------+
+| message                                                                                              | date       | message_id |
++------------------------------------------------------------------------------------------------------+------------+------------+
+| Hello                                                                                                | 2021-11-26 |          1 |
+| sdf                                                                                                  | 2021-11-26 |          2 |
+| df                                                                                                   | 2021-11-26 |          3 |
+| df                                                                                                   | 2021-11-26 |          4 |
+| Hello                                                                                                | 2021-11-27 |          5 |
+| Hello                                                                                                | 2021-11-27 |          6 |
+| Hello                                                                                                | 2021-11-27 |          7 |
+| sdfjads;klfjsa;kfljas;klfjsa;lkfsja;lkfajl;akja                                                      | 2021-11-27 |          8 |
+| Hello                                                                                                | 2021-11-27 |          9 |
+| sdfjads;klfjsa;kfljas;klfjsa;lkfsja;lkfajl;akja                                                      | 2021-11-27 |         10 |
+| PShgecl2nYPIpFpEQzJoUNzOEbzzYu4dWDdPIHcZ92mnjSXU50gwaw8hAR5wPkbg0HLUz32LifJV7PPBFXd5yyfKaZfSQawptmOf | 2021-11-27 |         11 |
+| sdf                                                                                                  | 2021-11-28 |         12 |
+| This is a test                                                                                       | 2021-11-28 |         13 |
+| PShgecl2nYPIpFpEQzJoUNzOEbzzYu4dWDdPIHcZ92mnjSXU50gwaw8hAR5wPkbg0HLUz32LifJV7PPBFXd5yyfKaZfSQawptmOf | 2021-11-28 |         14 |
+| Hello                                                                                                | 2021-11-28 |         15 |
+| This is a test to see how long of a message this can handle                                          | 2021-11-28 |         16 |
+| This is a test to see how long of a message this can handle                                          | 2021-11-28 |         17 |
+| dfg                                                                                                  | 2021-11-28 |         18 |
+| This is a test                                                                                       | 2021-11-28 |         19 |
+| PShgecl2nYPIpFpEQzJoUNzOEbzzYu4dWDdPIHcZ92mnjSXU50gwaw8hAR5wPkbg0HLUz32LifJV7PPBFXd5yyfKaZfSQawptmOf | 2021-11-28 |         20 |
+| This is a test                                                                                       | 2021-11-28 |         21 |
+| PShgecl2nYPIpFpEQzJoUNzOEbzzYu4dWDdPIHcZ92mnjSXU50gwaw8hAR5wPkbg0HLUz32LifJV7PPBFXd5yyfKaZfSQawptmOf | 2021-11-28 |         22 |
++------------------------------------------------------------------------------------------------------+------------+------------+

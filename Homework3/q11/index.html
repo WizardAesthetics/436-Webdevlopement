@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tution Cost</title>
+    <style>
+        body{
+            background-color: brown;
+        }
+        input {
+            margin: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        div
+        {
+            display: block;
+            text-align: center;
+            background-color: cadetblue;
+            height: 400px;
+            padding: 50px;
+            width: 40%;
+            margin: auto;
+        }
+        form
+        {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>University Coast</h1>
+        <!-- Using post to gather data -->
+        <form method="post" action="index.php" > 
+            <!-- Gredits -->
+            <input name ='credits' type="number" required>Credits</input><br>
+
+            <!-- Radido group for status -->
+            <input checked name="status" value ='UnderGrad' type="radio">UnderGrad</input>
+            <input name="status" value ='Graduate' type="radio"></input>Graduate<br>
+
+            <!-- Radio gorup for state -->
+            <input checked name="state" value ='inState' type="radio">In State</input>
+            <input name="state" value ='outState' type="radio">Out of State</input><br>
+
+            <!-- Check boxs for features -->
+            <input name="dorm" value ='dorm' type="checkbox">dorm</input>
+            <input name="dining" value ='dining' type="checkbox">dining</input>
+            <input name="parking" value ='parking' type="checkbox">parking</input><br>
+
+            <input type="submit"/><br>
+            <input type="reset"/><br>
+        </form>
+    </div>  
+</body>  
+</html>

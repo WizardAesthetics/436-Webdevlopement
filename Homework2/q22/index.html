@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Blake Johnson">
+    <title>Blake's Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Title -->
+    <div id=title>
+        <h1>Blake Johnson</h1>
+    </div>
+
+    <div id = 'time'>
+        <h2 id = 'timeText'></h2>
+    </div>
+
+    <div id=quote>
+        <h3>Quote</h3>
+        <br>
+        <p id = 'quoteText'> </p>
+        <br>
+        <p id = 'quoteAuthor'></p>
+    </div>
+
+    <div id=parent>
+
+        <div id=image>
+            <img src="images/269302_1015-2_5x3_5-24-A.jpg" alt="">
+        </div>
+
+        <!-- Left Links -->
+        <div id=left>
+            <ol>
+                <li>
+                    <h3>Entertainment</h3>
+                </li>
+                <li><a href="https://www.netflix.com/">Netflix</a></li>
+                <li><a href="https://www.hulu.com/">Hulu</a></li>
+                <li><a href="https://www.disneyplus.com/">Disneyplus</a></li>
+                <li><a href="https://www.hbomax.com/">HBO Max</a></li>
+                <li><a href="https://www.peacocktv.com/">Peacocktv</a></li>
+            </ol>
+        </div>
+
+        <!-- Right Links-->
+        <div id=right>
+            <ol>
+                <li>
+                    <h3>Shopping</h3>
+                </li>
+                <li><a href="https://www.amazon.com/">Amazon</a></li>
+                <li><a href="https://www.ebay.com/">Ebay</a></li>
+                <li><a href="https://www.walmart.com/">Walmart</a></li>
+                <li><a href="https://www.target.com/">Target</a></li>
+                <li><a href="https://www.costco.com/">Costco</a></li>
+            </ol>
+        </div>
+
+        <!-- Top Links -->
+        <div id=top>
+            <ol>
+                <li>
+                    <h3>Social Media</h3>
+                </li>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://twitter.com/">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/">Linkedin</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.youtube.com/">Youtube</a></li>
+            </ol>
+        </div>
+
+        <!-- Bottom Links -->
+        <div id=bottom>
+            <ol>
+                <li>
+                    <h3>Eastern</h3>
+                </li>
+                <li><a href="http://art.emich.edu/">Art</a></li>
+                <li><a href="https://www.emich.edu/biology/index.php">Biology</a></li>
+                <li><a href="https://www.emich.edu/chemistry/">Chemistry</a></li>
+                <li><a href="https://www.emich.edu/cmta/">Theatre Arts</a></li>
+                <li><a href="https://www.emich.edu/computer-science/index.php">Computer Science</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+
+        q= Math.floor(Math.random() * 10);
+        if(q==0){
+            document.getElementById('quoteText').innerHTML = '“Whats the key to success? The key is, there is no key. Be humble, hungry, and the hardest worker in any room."'
+            document.getElementById('quoteAuthor').innerHTML = '-Dwayne ‘The Rock’ Johnson'
+        } else if(q==1){
+            document.getElementById('quoteText').innerHTML = '“If something stands between you and your success, MOVE IT! Never be denied.”'
+            document.getElementById('quoteAuthor').innerHTML = '-Dwayne ‘The Rock’ Johnson'
+        } else if(q==2){
+            document.getElementById('quoteText').innerHTML = '“Success isn’t overnight. It’s when every day you get a little better than the day before. It all adds up.”'
+            document.getElementById('quoteAuthor').innerHTML = '-Dwayne ‘The Rock’ Johnson'
+        } else if(q==3){
+            document.getElementById('quoteText').innerHTML = '"Where I excel is ridiculous, sickening, work ethic. You know, while the other guy’s sleeping? I’m working."'
+            document.getElementById('quoteAuthor').innerHTML = '-Will Smith'
+        } else if(q==4){
+            document.getElementById('quoteText').innerHTML = '“The things that have been most valuable to me I did not learn in school.”'
+            document.getElementById('quoteAuthor').innerHTML = '-Will Smith'
+        } else if(q==5){
+            document.getElementById('quoteText').innerHTML = '“I want to do good. I want the world to be better because I was here. I want my life, I want my work, my family, I want it to mean something."'
+            document.getElementById('quoteAuthor').innerHTML = '-Will Smith'
+        } else if(q==6){
+            document.getElementById('quoteText').innerHTML = '“There is still a lot to learn and there is always great stuff out there. Even mistakes can be wonderful.”'
+            document.getElementById('quoteAuthor').innerHTML = '-Robin Williams'
+        } else if(q==7){
+            document.getElementById('quoteText').innerHTML = '“I try to make sense of things. Which is why, I guess, I believe in destiny. There must be a reason that I am as I am. There must be.”'
+            document.getElementById('quoteAuthor').innerHTML = '-Robin Williams'
+        } else if(q==8){
+            document.getElementById('quoteText').innerHTML = '“You will have bad times, but they will always wake you up to the stuff you weren’t paying attention to.”'
+            document.getElementById('quoteAuthor').innerHTML = '-Robin Williams'
+        } else if(q==9){
+            document.getElementById('quoteText').innerHTML = '“Seize the day. Because, believe it or not, each and every one of us in this room is one day going to stop breathing.”' 
+            document.getElementById('quoteAuthor').innerHTML = '-Robin Williams'
+        }
+
+        p = document.getElementById("timeText"); 
+        count = 1;
+        today = new Date();
+        p.innerHTML = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        animationId = setInterval(animate, 1000); 
+        function animate() 
+        { 
+            if (count == 10) {
+                today = new Date();
+                p.innerHTML = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                count = 1
+            } else { 
+                count = count + 1; 
+            } 
+        }  
+    </script>
+
+</body>

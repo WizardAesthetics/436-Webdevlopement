@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Blake Johnson">
+    <title>Blake's Portal</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    
+    <div id = 'playfield' style=" width: 80em; height: 50em; background: grey; border: solid black;">
+        <p id="output" style="width: 100px; height: 100px; position: absolute; top: 50px; left: 150px; background: green"></p> 
+        <p id="player" style="width: 100px; height: 100px; position: absolute; top: 50px; left: 50px; background: red"></p>
+    </div>
+    <div style=" padding-top: 20px;">
+        <button style="font-size: 30px;" onclick="move(0)">Up</button>
+        <button style="font-size: 30px;" onclick="move(1)">Down</button>
+        <button style="font-size: 30px;" onclick="move(2)">Left</button>
+        <button style="font-size: 30px;" onclick="move(3)">Right</button>
+        <button style="font-size: 30px;" onclick="move(4)">Start</button>
+    </div>
+
+    <script>
+        let topY = 50;
+        let lefX = 50;
+        var output = document.getElementById("output");
+        var player = document.getElementById("player");
+        var playfield = document.getElementById("playfield");
+        var count = 1;
+
+        function animate() 
+        { 
+            if (count == 10) {
+                output.style.left = (Math.floor(Math.random() * 64)+6) + "em";
+                output.style.top = (Math.floor(Math.random() * 34)+6) + "em"; 
+                count = 1
+            } else { 
+                count = count + 1; 
+            } 
+        }  
+
+        function move(direction){
+            if(direction==0){
+                if(topY-50 > 0){
+                    topY -=50;
+                    player.style.top = (topY) + "px";}
+            } else if(direction==1){
+                if(topY+50<playfield.offsetHeight-150){
+                    topY +=50;
+                    player.style.top = (topY) + "px";}
+            } else if(direction==2){
+                if(lefX-50> 25){
+                    lefX -=50;
+                    player.style.left = (lefX) + "px";}
+            } else if(direction==3){
+                if(lefX+50 <playfield.offsetWidth-100){
+                    lefX +=50;
+                    player.style.left = (lefX) + "px";}
+            }else if(direction==4){
+                animationId = setInterval(animate, 450);
+            }
+        }
+        
+    </script> 
+</body>

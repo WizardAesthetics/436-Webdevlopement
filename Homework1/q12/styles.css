@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+  background-image: url("images/653dfc50a237498090e49bb44e444e51.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+p{
+  color:white;
+  text-align: center;
+  font-size: 150px;
+  margin-bottom: 100px;
+}
+
+/* Home Page */
+
+#home{
+  border: solid black;
+  margin: 20px;
+  padding: 50px;
+  background-color: #cc30008f;
+}
+
+#home p{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  background-color: grey;
+  padding: 30px;
+  margin: 0;
+}
+
+/* Menu Page Styling */
+
+#menu{
+  border: solid black;
+  background-color: #cc30008f;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  width: auto;
+}
+
+#menu table{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#menu .title{
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+#menu td p{
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+#menu td{
+  border:solid black;
+  width: 50%;
+  background-color: grey;
+}
+
+#menu img{
+  width: 500px;
+  height: 300px;
+}
+
+
+/* Contact */
+#contact {
+  border: solid black;
+  margin: 20px;
+  padding: 50px;
+  background-color: #cc30008f;
+}
+
+#contact p{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  background-color: grey;
+  padding: 50px;
+  margin: 0;
+}
+
+
+/* Price */
+#price{
+  border: solid black;
+  background-color: #cc30008f;
+  margin: auto;
+  padding: 50px;
+  width: 50%;
+}
+
+#price table{
+  text-align: center;
+  background-color: grey;
+  border: solid black;
+  width: 100%;
+}
+
+#price td{
+  width: 50%;
+  background-color: grey;
+}
+
+#price td p{
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+}
+
+#price th{
+  color:white;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 100px;
+}
+
+/* Main Menu */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+  
+li a:hover {
+  background-color: #111;
+}
+  
+.active {
+  background-color:red;
+}

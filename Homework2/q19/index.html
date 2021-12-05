@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Blake Johnson">
+    <title>Laptop Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        function paragraphChange(message) {
+            if (message == 0) {
+                document.getElementById('HPRev').style.backgroundColor = '#E990AE'
+                document.getElementById('HPRev').style.fontFamily = 'cursive'
+            } else if (message == 1) {
+                document.getElementById('DellRev').style.backgroundColor = '#90D4E9'
+                document.getElementById('DellRev').style.fontFamily = 'cursive'
+            } else if (message == 2) {
+                document.getElementById('MSIRev').style.backgroundColor = '#D6E990'
+                document.getElementById('MSIRev').style.fontFamily = 'cursive'
+            } else if (message == 3) {
+                document.getElementById('AcerRev').style.backgroundColor = '#CD90E9'
+                document.getElementById('AcerRev').style.fontFamily = 'cursive'
+            } else if (message == 4) {
+                document.getElementById('HPtitle').style.fontSize = '30px'
+            } else if (message == 5) {
+                document.getElementById('Delltitle').style.fontSize = '30px'
+            } else if (message == 6) {
+                document.getElementById('MSItitle').style.fontSize = '30px'
+            } else if (message == 7) {
+                document.getElementById('Acertitle').style.fontSize = '30px'
+            } else if (message == 8) {
+                document.getElementById('HPimg').style.border = '3px solid black'
+            } else if (message == 9) {
+                document.getElementById('Dellimg').style.border = '3px solid black'
+            } else if (message == 10) {
+                document.getElementById('MSIimg').style.border = '3px solid black'
+            } else if (message == 11) {
+                document.getElementById('Acerimg').style.border = '3px solid black'
+            }
+        }
+
+        function paragraphReset(message) {
+            if (message == 0) {
+                document.getElementById('HPRev').style.backgroundColor = '#90E9CB'
+                document.getElementById('HPRev').style.fontFamily = 'Arial'
+            } else if (message == 1) {
+                document.getElementById('DellRev').style.backgroundColor = '#E9A590'
+                document.getElementById('DellRev').style.fontFamily = 'Arial'
+            } else if (message == 2) {
+                document.getElementById('MSIRev').style.backgroundColor = '#A390E9'
+                document.getElementById('MSIRev').style.fontFamily = 'Arial'
+            } else if (message == 3) {
+                document.getElementById('AcerRev').style.backgroundColor = '#ACE990'
+                document.getElementById('AcerRev').style.fontFamily = 'Arial'
+            } else if (message == 4) {
+                document.getElementById('HPtitle').style.fontSize = ''
+            } else if (message == 5) {
+                document.getElementById('Delltitle').style.fontSize = ''
+            } else if (message == 6) {
+                document.getElementById('MSItitle').style.fontSize = ''
+            } else if (message == 7) {
+                document.getElementById('Acertitle').style.fontSize = ''
+            } else if (message == 8) {
+                document.getElementById('HPimg').style.border = ''
+            } else if (message == 9) {
+                document.getElementById('Dellimg').style.border = ''
+            } else if (message == 10) {
+                document.getElementById('MSIimg').style.border = ''
+            } else if (message == 11) {
+                document.getElementById('Acerimg').style.border = ''
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+
+    <div>
+        <!--Name Heading -->
+        <h1>Laptop Reviews</h1>
+        <h2 id='HPtitle' onmouseover="paragraphChange(4)" onmouseleave="paragraphReset(4)"><a
+                style="text-decoration: none;" target="_blank"
+                href="https://www.amazon.com/HP-i5-1135G7-Processor-Lightweight-15-dy2021nr/dp/B08KGZ79N6/ref=sr_1_3?crid=GR5Y94IIG1F0&dchild=1&keywords=laptop&qid=1632603995&sprefix=Lap%2Caps%2C183&sr=8-3"><img
+                    id='HPimg' onmouseover="paragraphChange(8)" onmouseleave="paragraphReset(8)" src="images/HP.jpg"
+                    alt="HP" style="width: 75px; height:75px;"> HP </a>
+        </h2>
+        <p id='HPRev' onmouseover="paragraphChange(0)" onmouseleave="paragraphReset(0)" style="background-color: #90E9CB;">
+            TAKE IT ANYWHERE – With its thin and light design, 6.5 millimeter micro-edge bezel display, and 82%
+            screen to body ratio, you can take this PC anywhere and see more of what you love (1).
+            REVOLUTIONARY ENTERTAINMENT – Enjoy ultra-wide viewing angles and seamlessly perform multi-monitor
+            set-ups with a 15.6-inch, Full HD, IPS, micro-edge, and anti-glare display (2).
+            IMPRESSIVE GRAPHICS – The Intel Iris Xe Graphics gives you a new level of performance with crisp,
+            stunning visuals, plus the convenience of a thin and light laptop (3).
+            UNSTOPPABLE PERFORMANCE – Get things done fast with the 11th Generation Intel Core i5-1135G7 processor,
+            which delivers instant responsiveness and best-in-class connectivity (4).
+            MEMORY AND STORAGE – Get up to 15x faster performance than a traditional hard drive with 256 GB PCIe
+            NVMe M.2 SSD storage and experience improved multitasking with higher bandwidth thanks to 8 GB of RAM
+            (5).
+        </p>
+        <h2 id='Delltitle' onmouseover="paragraphChange(5)" onmouseleave="paragraphReset(5)"><a
+                style="text-decoration: none;" target="_blank"
+                href="https://www.amazon.com/Dell-15-Plus-Touchscreen-Fingerprint/dp/B09C2TKHQ4/ref=sr_1_15?crid=GR5Y94IIG1F0&dchild=1&keywords=laptop&qid=1632603995&sprefix=Lap%2Caps%2C183&sr=8-15"><img
+                    id='Dellimg' onmouseover="paragraphChange(9)" onmouseleave="paragraphReset(9)" src="images/Dell.jpg"
+                    alt="Dell" style="width: 75px; height:75px;"> Dell </a>
+        </h2>
+        <p id='DellRev' onmouseover="paragraphChange(1)" onmouseleave="paragraphReset(1)" style="background-color: #E9A590;">
+            【Memory & Storage】16GB DDR4 RAM to smoothly run multiple applications and browser tabs all at once. 1TB
+            PCIe NVMe M.2 Solid State Drive provides fast bootup, ample storage space and speedy data transfer
+            【Powerful Processor】10th Generation Intel Core i7-10750H (6 Core, 12 Threads, 12MB Cache, 2.60 GHz base
+            frequency up to 5.00 GHz max turbo frequency) offers power of an unrelenting performance
+            【Dazzling Display】15.6 inches diagonal Full HD 1080p LED-Backlit Touch Display, Narrow Boarder, Wide
+            Viewing Angle, 1920 x 1080 resolution
+            【Carry a lighter load】 Dual-fans, dual-heat pipes and a drop-hinge design keep your system cool while
+            working, while new vents above the keyboard and under the laptop improve airflow, helping keep this
+            laptop thinner.
+            【Tech Specs】2 x USB 3.2 Gen 1, 1 x USB 3.2 Gen 1 Type-C with Thunderbolt/DisplayPort/PowerDelivery, 1 x
+            HDMI 2.0, 1 x Micro SD Card Reader, 1 x Headphone / Mic combo jack; Built-in HD Webcam with dual array
+            digital microphones; Backlit Keyboard with numeric keypad, Fingerprint Reader; Waves MaxxAudio Dual
+            speakers; Intel Wi-Fi 6 AX201 (2x2) and Bluetooth 5 Combo; 6-cell 97WHr bettery with ExpressCharge;
+            Windows 10 Home 64-bit
+        </p>
+        <h2 id='MSItitle' onmouseover="paragraphChange(6)" onmouseleave="paragraphReset(6)"><a
+                style="text-decoration: none;" target="_blank"
+                href="https://www.amazon.com/MSI-GL75-Leopard-Gaming-Laptop/dp/B091265XFT/ref=sr_1_19?crid=GR5Y94IIG1F0&dchild=1&keywords=laptop&qid=1632603995&sprefix=Lap%2Caps%2C183&sr=8-19"><img
+                    id='MSIimg' onmouseover="paragraphChange(10)" onmouseleave="paragraphReset(10)" src="images/MSI.jpg"
+                    alt="MSI" style="width: 75px; height:75px;"> MSI </a></h2>
+        <p id='MSIRev' onmouseover="paragraphChange(2)" onmouseleave="paragraphReset(2)" style="background-color: #A390E9;">
+            Smooth Display: The 17.3” 144Hz display delivers a high refresh rate for smooth and vibrant gameplay so
+            you don't miss a frame of the game
+            Powered Up: The 10th Gen. Intel Core i7 processor, delivers solid high performance processing power to
+            bring you an unparalleled gaming experience
+            Supercharged Graphics: The GTX 1660 Ti is built on NVIDIA's Turing architecture. Supercharged for
+            today's most popular games, exerience the game
+            Play Cool: Featuring CPU and GPU cooling technology to maximize airflow and thermals for smooth gaming
+            and performance within a compact chassis
+            Customizable Lighting: Customize each key to your liking and receive real time in-game status updates
+            through keyboard lighting
+        </p>
+        <h2 id='Acertitle' onmouseover="paragraphChange(7)" onmouseleave="paragraphReset(7)"><a
+                style="text-decoration: none;" target="_blank"
+                href="https://www.amazon.com/Acer-Convertible-i7-1065G7-Rechargeable-SP513-54N-74V2/dp/B086KJCJDM/ref=sr_1_18?crid=GR5Y94IIG1F0&dchild=1&keywords=laptop&qid=1632603995&sprefix=Lap%2Caps%2C183&sr=8-18"><img
+                    id='Acerimg' onmouseover="paragraphChange(11)" onmouseleave="paragraphReset(11)"
+                    src="images/Acer.jpg" alt="Acer" style="width: 75px; height:75px;"> Acer </a></h2>
+        <p id='AcerRev' onmouseover="paragraphChange(3)" onmouseleave="paragraphReset(3)" style="background-color: #ACE990;">
+            10th Generation Intel Core i7-1065G7 Processor (Up to 3. 9GHz) 16GB LPDDR4X Memory 512GB PCIe
+            NVMe SSD
+            13.5" Acer VertiView 2K 2256 x 1504 Widescreen IPS LED-backlit Touch Display (3:2 aspect ratio)
+            Intel Iris Plus Graphics
+            Intel Wireless Wi-Fi 6 AX201 802. 11ax Backlit Keyboard fingerprint reader up to 15 hours
+            battery life
+            2 - USB 3. 1 Type C port supporting USB 3. 1 Gen 2 (up to 10 Gbps), DisplayPort over USB-C,
+            Thunderbolt 3, USB Charging, DC-in, 2 - USB 3. 2 Gen 1 port (one featuring power-off charging) &
+            1 - HDMI 2. 0 port
+            Co-Engineered for Mobile Performance by Intel and Acer Rechargeable Acer Active Stylus with
+            Wacom AES 1. 0
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Compound Interest</title>
+    <script>
+        function compoundInterest(princable, interest, years) {
+            ans = princable * Math.pow((1 + interest / 100), years);
+            document.getElementById('total').innerHTML = ans.toString();
+            document.getElementById('ans').style.visibility = 'visible';
+        }
+    </script>
+
+    <style>
+        table {
+            margin: auto;
+        }
+
+        td {
+            text-align: left;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #ans {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Compound Interest</h1>
+    <table>
+
+        <tr>
+            <td>Princable: </td>
+            <td><input id='princable' type="number" /></td>
+        </tr>
+
+        <tr>
+            <td>Interest:</td>
+            <td><input id='interest' type="number" /></td>
+        </tr>
+
+        <tr>
+            <td>years:</td>
+            <td><input id='years' type="number" /></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align: center;"><button
+                    onclick="compoundInterest(document.getElementById('princable').value, document.getElementById('interest').value, document.getElementById('years').value)">Calculate</button>
+            </td>
+        </tr>
+
+        <tr id='ans'>
+            <td>Compound Interest:</td>
+            <td>
+                <p id='total'></p>
+        </tr>
+
+    </table>
+</body>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<head>
+    <title>University Coast</title>
+    <script>
+        function universityCoast(credits) {
+
+            var ans = 0;
+            if(document.getElementById('UnderGrad').checked){
+                if(document.getElementById('inState').checked){
+                    ans = 200*credits;
+                } else if(document.getElementById('outState').checked){
+                    ans = 400*credits;
+                }
+
+                if(document.getElementById('dorm').checked){
+                    ans += 1000;
+                }
+
+                if(document.getElementById('dining').checked){
+                    ans += 500;
+                }
+
+                if(document.getElementById('parking').checked){
+                    ans += 200;
+                }
+            } else  if(document.getElementById('Graduate').checked){
+                if(document.getElementById('inState').checked){
+                    ans += 300*credits;
+                } else if(document.getElementById('outState').checked){
+                    ans += 600*credits;
+                }
+
+                if(document.getElementById('dorm').checked){
+                    ans += 1000;
+                }
+
+                if(document.getElementById('dining').checked){
+                    ans += 500;
+                }
+
+                if(document.getElementById('parking').checked){
+                    ans += 200;
+                }
+                
+            }
+
+            document.getElementById('total').innerHTML = 'University Coast: $' + ans.toString();
+            document.getElementById('ans').style.visibility = 'visible'; 
+        }
+    </script>
+
+    <style>
+        table{
+            border: solid black;
+            margin: auto;
+        }
+       td{
+            text-align:left;
+            padding: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+
+        #ans{
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>University Coast</h1>
+    <table>
+
+        <tr><td>Credits: </td><td><input id ='credits' type="number"/></td></tr>
+    
+        <tr><td><label>UnderGrad</label><input checked name="status" id ='UnderGrad' type="radio"/></td>
+            <td><label>Graduate</label><input name="status" id ='Graduate' type="radio"/></td>
+        </tr>
+
+        <tr><td><label>In State</label><input checked name="state" id ='inState' type="radio"/></td>
+            <td><label>Out of State</label><input name="state" id ='outState' type="radio"/></td>
+        </tr>
+
+        <tr><td><label>dorm</label><input name="options" id ='dorm' type="checkbox"/></td>
+            <td><label>dining</label><input name="options" id ='dining' type="checkbox"/></td>
+            <td><label>parking</label><input name="options" id ='parking' type="checkbox"/></td>
+        </tr>
+
+
+        <tr><td colspan="3" style="text-align: center;"><button onclick="universityCoast(document.getElementById('credits').value)">Calculate</button></td></tr>
+
+        <tr id = 'ans'><td colspan="3" style="text-align: center;"><p id = 'total'></p></td></tr>
+    
+    </table>
+</body>

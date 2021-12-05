@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Compound Interest</title>
+    <style>
+        body{
+            background-color: brown;
+        }
+        input {
+            margin: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        div
+        {
+            display: block;
+            text-align: center;
+            background-color: cadetblue;
+            height: 400px;
+            padding: 50px;
+            width: 40%;
+            margin: auto;
+        }
+        form
+        {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Compound Interest</h1>
+        <!-- Uses get method to gather data -->
+        <form method="get" action="index.php" > 
+            <input id='princable' name= "Princable" type="number">Princable</input><br>
+            <input id='interest' name= "Interest" type="number"/>Interest</input><br>
+            <input id='years' name = "Years" type="number"/>Years</input><br>
+            <input type="submit"></input><br>
+            <input type="reset"></input><br>
+        </form>
+    </div>
+</body>

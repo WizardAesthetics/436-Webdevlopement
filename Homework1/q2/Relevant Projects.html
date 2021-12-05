@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Blake Johnson resume ">
+    <meta name="author" content="Blake Johnson">
+    <title>Relevant Projects</title>
+</head>
+
+<body style="font-family: Arial;font-size: large; background-color: gray;">
+
+    <div class="">
+        <!--Name Heading -->
+        <table style="width:100%; margin-left: auto; margin-right: auto;">
+            <tr style="text-align: center;">
+                <td colspan="3" style="border: solid black;">
+                    <h1>Blake Johnson</h1>
+                </td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>30881 W Nye Ct. Livonia, MI. 48154</td>
+                <td>734-558-8730</td>
+                <td>Bjohn136@emich.edu</td>
+            </tr>
+        </table>
+
+        <!-- Related Experience table -->
+        <table style="width:100%; margin-left: auto; margin-right: auto; background-color: rgb(170, 161, 83);">
+            <tr style="text-align: center;">
+                <td colspan="2" style="border: solid black;">
+                    <h2>Relevant Projects</h2>
+                </td>
+            </tr>
+            <tr style="text-align: center; ">
+                <td style="width:50%;border: solid black;">
+                    <h3>Database Management</h3>
+                </td>
+                <td style="width:50%; border: solid black;">
+                    <h3>Android Development</h3>
+                </td>
+            </tr>
+            <tr style="text-align: left; ">
+                <td style="width:50%;">
+                    <ul>
+                        <li>Created and managed databases, using techniques such as: AVLTrees, Binary Search Trees and
+                            Hash
+                            Tables.</li>
+                        <li>Developed classes and methods to segment code that was used often.</li>
+                        <li>Used Java, in eclipse to create a text file database to hold student information.</li>
+                        <li>Implemented my own AVLTree and Hash Table classes to use as data structures.</li>
+                        <li><a
+                                href="https://github.com/WizardAesthetics/DatabaseUsingHashTable">https://github.com/WizardAesthetics/DatabaseUsingHashTable</a>
+                        </li>
+                    </ul>
+                </td>
+                <td style="width:50%;">
+                    <ul>
+                        <li>Used Model View Controller (MVC) architecture with multiple screens for the users to store
+                            new
+                            passwords.</li>
+                        <li>Developed a SQLite database, with two columns. Column one is the company that the user has
+                            an
+                            account with and the second column is the password itself.</li>
+                        <li>Used Java classes to get information that was parsed from the XML mockup language to store
+                            user
+                            information to a SQLite database.</li>
+                        <li><a
+                                href="https://github.com/WizardAesthetics/PasswordSaver">https://github.com/WizardAesthetics/PasswordSaver</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Main Source code -->
+        <table style="width:100%; margin-left: auto; margin-right: auto;background-color: rgb(167, 122, 105);"
+            id="Main">
+            <tr style="text-align: center;">
+                <td colspan="3" style="border: solid black;">
+                    <h2>Source Code</h2>
+                </td>
+            </tr>
+            <tr style="text-align: center;">
+                <td style=" width: 33%;border: solid black;">
+                    <h3>Main</h3>
+                </td>
+                <td style="width: 33%;border: solid black;"><a href="#DatabaseManager">
+                        <h3>Go to DatabaseManager</h3>
+                    </a></td>
+                <td style="border: solid black;"><a href="#Password">
+                        <h3>Go to Password</h3>
+                    </a></td>
+            </tr>
+            <tr style="align-self: center;">
+                <td colspan="3" style="align-self: center;">
+                    <pre style="font-size: large;">
+package com.example.question7;
+
+import android.content.Intent;
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.GridLayout;
+import android.widget.ScrollView;
+import android.graphics.Point;
+import android.view.Gravity;
+import android.graphics.Color;
+import android.util.TypedValue;
+import android.widget.Toast;
+import android.widget.Button;
+import java.util.LinkedList;
+
+public class MainActivity extends AppCompatActivity
+{
+    private DatabaseManager dbManager;
+    private float total;
+
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+        dbManager = new DatabaseManager(this);
+
+        total = 0;
+
+        updateView();
+    }
+
+    protected void onStart()
+    {
+        super.onStart();
+
+        updateView();
+    }
+
+    private void updateView()
+    {
+        LinkedList &lt;<code>Password></code> list = dbManager.all();
+
+        if (list.size() > 0)
+        {
+            Point size = new Point();
+            getWindowManager().getDefaultDisplay().getSize(size);
+            int buttonWidth = size.x/2;
+            int DP = (int)(getResources().getDisplayMetrics().density);
+            int rows = (list.size() + 1)/2;
+            int columns = 2;
+
+            GridLayout grid = new GridLayout(this);
+            grid.setRowCount(rows);
+            grid.setColumnCount(columns);
+            ScrollView.LayoutParams params = new ScrollView.LayoutParams(0, 0);
+            params.width = columns*buttonWidth;
+            params.height = rows*buttonWidth;
+            grid.setLayoutParams(params);
+
+            Button[] buttons = new Button[list.size()];
+            for (int i = 0; i &lt; list.size(); i++)
+            {
+                Password password = list.get(i);
+
+                buttons[i] = new Button(this);
+                buttons[i].setText(password.getName() + "\n" + password.getPassword());
+                buttons[i].setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+                buttons[i].setTextColor(Color.parseColor("#000000"));
+                buttons[i].setBackgroundColor(Color.parseColor("#009900"));
+                buttons[i].setPadding(10*DP, 10*DP, 10*DP, 10*DP);
+                buttons[i].setGravity(Gravity.CENTER);
+
+                GridLayout.LayoutParams params1 = new GridLayout.LayoutParams();
+                params1.width = buttonWidth;
+                params1.height = buttonWidth;
+                params1.rowSpec = GridLayout.spec(i/columns, 1);
+                params1.columnSpec = GridLayout.spec(i%columns, 1);
+                params1.topMargin = params1.bottomMargin = 1;
+                params1.leftMargin = params1.rightMargin = 1;
+                buttons[i].setLayoutParams(params1);
+
+
+                grid.addView(buttons[i]);
+            }
+
+            ScrollView scroll = (ScrollView)findViewById(R.id.scroll);
+            scroll.removeAllViewsInLayout();
+            scroll.addView(grid);
+        }
+        else
+        {
+            ScrollView scroll = (ScrollView)findViewById(R.id.scroll);
+            scroll.removeAllViewsInLayout();
+        }
+
+    }
+
+
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+
+        int id = item.getItemId();
+
+        if (id == R.id.add)
+        {
+            Intent insertActivity = new Intent(this, InsertActivity.class);
+            startActivity(insertActivity);
+        }
+        else if (id == R.id.delete)
+        {
+            Intent deleteActivity = new Intent(this, DeleteActivity.class);
+            startActivity(deleteActivity);
+        }
+        else if (id == R.id.update)
+        {
+            Intent updateActivity = new Intent(this, UpdateActivity.class);
+            startActivity(updateActivity);
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+}</pre>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Database sorce code -->
+        <table style="width:100%; margin-left: auto; margin-right: auto; background-color: rgb(167, 122, 105);"
+            id="DatabaseManager">
+            <tr style="text-align: center;">
+                <td style=" width: 33%;border: solid black;"><a href="#Main">
+                        <h3>Go to Main</h3>
+                    </a></td>
+                <td style="width: 33%;border: solid black;">
+                    <h3>DatabaseManager</h3>
+                </td>
+                <td style="border: solid black;"><a href="#Password">
+                        <h3>Go to Password</h3>
+                    </a></td>
+            </tr>
+            <tr style="align-self: center;">
+                <td colspan="3" style="align-self: center;">
+                    <pre style="font-size: large;">
+package com.example.question7;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import java.util.LinkedList;
+
+public class DatabaseManager extends SQLiteOpenHelper
+{
+    private static final String DATABASE_NAME = "PASSWORD_DATABASE";
+    private static final int DATABASE_VERSION = 1;
+    private static final String TABLE_NAME = "PASSWORD_TABLE";
+
+    public DatabaseManager(Context context)
+    {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
+
+    public void onCreate(SQLiteDatabase db)
+    {
+        String command = "create table " + TABLE_NAME + "(" +
+                "NAME text, " +
+                "PASSWORD text)";
+
+        db.execSQL(command);
+    }
+
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
+    {
+
+    }
+
+    public void insert(Password password)
+    {
+        SQLiteDatabase db = getWritableDatabase();
+
+        ContentValues row = new ContentValues();
+        row.put("NAME", password.getName());
+        row.put("PASSWORD", password.getPassword());
+        db.insert(TABLE_NAME, null, row);
+
+        db.close();
+    }
+
+    public void delete(String name)
+    {
+        SQLiteDatabase db = getWritableDatabase();
+
+        db.delete(TABLE_NAME, "NAME = ?", new String[]{name});
+
+        db.close();
+    }
+
+    public void update(Password password)
+    {
+        SQLiteDatabase db = getWritableDatabase();
+
+        ContentValues row = new ContentValues();
+        row.put("NAME", password.getName());
+        row.put("PASSWORD", password.getPassword());
+        db.update(TABLE_NAME, row, "NAME = ?", new String[]{password.getName()});
+
+        db.close();
+    }
+
+    public LinkedList&lt;<code>Password></code> all()
+    {
+        SQLiteDatabase db = getWritableDatabase();
+
+        LinkedList&lt;<code>Password></code> list = new LinkedList&lt;<code>Password></code>();
+
+        Cursor cursor = db.query(TABLE_NAME, new String[]{"NAME", "PASSWORD"},
+                null, null, null, null, null);
+
+        while (cursor.moveToNext() && cursor!=null)
+        {
+            String name = cursor.getString(0);
+            String passwordString = cursor.getString(1);
+            Password password = new Password(name, passwordString);
+            list.addLast(password);
+        }
+
+        cursor.close();
+        db.close();
+
+        return list;
+    }
+
+    public void clear()
+    {
+        SQLiteDatabase db = getWritableDatabase();
+
+        db.delete(TABLE_NAME, null, null);
+
+        db.close();
+    }
+}</pre>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Password sorce code -->
+        <table style="width:100%; margin-left: auto; margin-right: auto; background-color: rgb(167, 122, 105);"
+            id="Password">
+            <tr style="text-align: center;">
+                <td style=" width: 33%;border: solid black;"><a href="#Main">
+                        <h3>Go to Main</h3>
+                    </a></td>
+                <td style="width: 33%;border: solid black;"><a href="#DatabaseManager">
+                        <h3>Go to DatabaseManager</h3>
+                    </a></td>
+                <td style="border: solid black;">
+                    <h3>Password</h3>
+                </td>
+            </tr>
+            <tr style="align-self: center;">
+                <td colspan="3" style="align-self: center;">
+                    <pre style="font-size: large;">
+package com.example.question7;
+
+public class Password
+{
+    private String name;
+    private String password;
+
+    public Password(String name, String password)
+    {
+        this.name = name;
+        this.password = password;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public String getPassword()
+    {
+        return password;
+    }
+}</pre>
+                </td>
+            </tr>
+        </table>
+
+        <!--Related Links -->
+        <table style="width:100%; margin-left: auto; margin-right: auto;">
+            <tr style="text-align: center;">
+                <td><a href="https://www.linkedin.com/in/blake-johnson-6057b3159/">linkedin</a></td>
+                <td><a href="https://github.com/WizardAesthetics">github.com</a></td>
+                <td><a href="https://drive.google.com/drive/u/2/folders/1PnilEM-Z0dBgCMfx7DYm2Ny3GPXDIJDm">Google
+                        Drive</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Blake Johnson">
+    <title>EMU Offices</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+       
+        function myFunction() 
+        { 
+           var p = document.getElementById("myId"); 
+           p.style.visibility = 'visible';
+           var left = event.clientX; 
+           var top = event.clientY; 
+       
+           left = left+5;  
+           top = top+5;
+
+           p.style.left = left + "px"; 
+           p.style.top = top + "px"; 
+
+        } 
+
+        function exit(){
+            var p = document.getElementById("myId"); 
+            p.style.visibility = 'hidden';
+        }
+    </script>
+</head>
+
+<body onmousemove="myFunction()" onmouseleave="exit()">
+    <div>
+        <p id="myId"> EMU </p>
+        <!--Name Heading -->
+        <h1>EMU Office</h1>
+
+        <!-- Relevant Coursework table -->
+        <table>
+            <tr id="header">
+                <td>
+                    <h2>Office Name</h2>
+                </td>
+                <td>
+                    <h2>Location</h2>
+                </td>
+                <td>
+                    <h2>Phone Number</h2>
+                </td>
+            </tr>
+            <tr id="africology">
+                <td><a href="https://www.emich.edu/aaas/index.php" target="_Blank">Africology & African American
+                        Studies, Department</a></td>
+                <td>620 Pray-Harrold</td>
+                <td>734.487.3460</td>
+            </tr>
+            <tr id="art">
+                <td><a href="http://art.emich.edu/" target="_Blank">Art & Design, School</a></td>
+                <td>114 Ford Hall</td>
+                <td>734.487.1268</td>
+            </tr>
+            <tr id="biology">
+                <td><a href="https://www.emich.edu/biology/index.php" target="_Blank">Biology, Department</a></td>
+                <td>441 Science Complex </td>
+                <td>734.487.4242 </td>
+            </tr>
+            <tr id="chemistry">
+                <td><a href="https://www.emich.edu/chemistry/" target="_Blank">Chemistry, Department</a></td>
+                <td>541 Science Complex</td>
+                <td>734.487.0106 </td>
+            </tr>
+            <tr id="communication">
+                <td><a href="https://www.emich.edu/cmta/" target="_Blank">Communication, Media & Theatre Arts,
+                        School</a></td>
+                <td>124 Judy Sturgis Hill Building</td>
+                <td>734.487.3131</td>
+            </tr>
+            <tr id="computer">
+                <td><a href="https://www.emich.edu/computer-science/index.php" target="_Blank">Computer Science,
+                        Department</a></td>
+                <td>511 Pray-Harrold</td>
+                <td>734.487.1063 </td>
+            </tr>
+        </table>
+    </div> 
+</body>
+
+</html>

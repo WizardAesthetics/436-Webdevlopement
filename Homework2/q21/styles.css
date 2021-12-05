@@ -1,0 +1,61 @@
+
+
+body {
+    background-image: url("images/eastern-michigan-university_hero.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 60em;
+}
+
+table{
+    text-align: left;
+    margin-left:  auto;
+    margin-right: auto;
+    width: 75%;
+    background-color: rgb(135, 233, 179);
+    padding: 10px;
+}
+
+tr{
+    background-color: rgb(243, 165, 165);
+}
+td {
+    padding: 10px;
+    border:  solid black;
+}
+
+h1{
+    text-align: center;
+    background-color: rgb(136, 192, 194);
+    padding: 20px;
+    border: solid black;
+}
+
+tr:hover{
+    background-color: rgb(165, 201, 243); 
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: blue;
+}
+a:visited {
+    color: blue;
+}
+a:hover {
+    color: blue;
+}
+a:active {
+    color: blue;
+}
+p{
+    width: 50px; 
+    height: 20px; 
+    background:white; 
+    position: absolute; 
+    visibility: visible 
+}
+

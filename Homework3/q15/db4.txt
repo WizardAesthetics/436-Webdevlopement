@@ -1,0 +1,91 @@
+------------------------------------------------------------------------------------------------
+
+CREATE TABLE exam (
+  question varchar(256) DEFAULT NULL,
+  answer1 varchar(45) DEFAULT NULL,
+  answer2 varchar(45) DEFAULT NULL,
+  answer3 varchar(45) DEFAULT NULL,
+  answer4 varchar(45) DEFAULT NULL,
+  correct varchar(45) DEFAULT NULL,
+  id int NOT NULL,
+  PRIMARY KEY (id)
+)
+
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| question | varchar(256) | YES  |     | NULL    |       |
+| answer1  | varchar(45)  | YES  |     | NULL    |       |
+| answer2  | varchar(45)  | YES  |     | NULL    |       |
+| answer3  | varchar(45)  | YES  |     | NULL    |       |
+| answer4  | varchar(45)  | YES  |     | NULL    |       |
+| correct  | varchar(45)  | YES  |     | NULL    |       |
+| id       | int          | NO   | PRI | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+
++------------------------------------+---------+---------+---------+---------+---------+----+
+| question                           | answer1 | answer2 | answer3 | answer4 | correct | id |
++------------------------------------+---------+---------+---------+---------+---------+----+
+| Most popular programing langugae?  | PYTHON  | JAVA    | C++     | C       | PYTHON  |  0 |
+| Oldest programing language?        | C++     | JAVA    | FORTRAN | C       | FORTRAN |  1 |
+| Which one is a scripting language? | C++     | JAVA    | JS      | C       | JS      |  2 |
+| Which one has a garbage collector? | PYTHON  | JAVA    | C++     | C       | JAVA    |  3 |
+| Which one is not OOP?              | PYTHON  | JAVA    | C++     | C       | C       |  4 |
++------------------------------------+---------+---------+---------+---------+---------+----+
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+CREATE TABLE password (
+  pwd varchar(45) NOT NULL,
+  PRIMARY KEY (pwd)
+)
+
++-----------+
+| pwd       |
++-----------+
+| E01579643 |
++-----------+
+
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| pwd   | varchar(45) | NO   | PRI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+CREATE TABLE students (
+  fname varchar(45) DEFAULT NULL,
+  lname varchar(45) DEFAULT NULL,
+  code varchar(45) NOT NULL,
+  complete varchar(45) DEFAULT NULL,
+  score int DEFAULT NULL,
+  PRIMARY KEY (code)
+)
+
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| fname    | varchar(45) | YES  |     | NULL    |       |
+| lname    | varchar(45) | YES  |     | NULL    |       |
+| code     | varchar(45) | NO   | PRI | NULL    |       |
+| complete | varchar(45) | YES  |     | NULL    |       |
+| score    | int         | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
++---------+---------+------------+-----------+-------+
+| fname   | lname   | code       | complete  | score |
++---------+---------+------------+-----------+-------+
+| Blake   | Johnson | E01579643  | completed |     5 |
+| Kyle    | Johnson | E01579644  | completed |     1 |
+| Brent   | Lanzi   | E01579645  | completed |     2 |
+| Evean   | Johnson | E015796452 | temp      |     0 |
+| Neeco   | Lanzi   | E01579646  | completed |     3 |
+| Jeff    | Johnson | E01579647  | completed |     5 |
+| Brandon | Lanzi   | E01579648  | temp      |     0 |
+| Jamie   | Johnson | E01579649  | temp      |     0 |
+| Elliot  | Lanzi   | E01579650  | completed |     3 |
+| Ethan   | Lanzi   | E01579651  | temp      |     0 |
++---------+---------+------------+-----------+-------+
