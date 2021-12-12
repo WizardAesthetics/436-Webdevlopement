@@ -1,0 +1,91 @@
+------------------------------------------------------------------------------------------------------
+
+CREATE TABLE students (
+  name varchar(100) DEFAULT NULL,
+  code varchar(45) NOT NULL,
+  seen varchar(45) DEFAULT NULL,
+  complete varchar(45) DEFAULT NULL,
+  score int DEFAULT NULL,
+  PRIMARY KEY (code)
+)
+
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| name     | varchar(100) | YES  |     | NULL    |       |
+| code     | varchar(45)  | NO   | PRI | NULL    |       |
+| seen     | varchar(45)  | YES  |     | NULL    |       |
+| complete | varchar(45)  | YES  |     | NULL    |       |
+| score    | int          | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+
++----------------+-----------+------+-----------+-------+
+| name           | code      | seen | complete  | score |
++----------------+-----------+------+-----------+-------+
+| Blake Johnson  | E01579643 | seen | completed |     0 |
+| Kyle Johnson   | E01579644 | seen | completed |     5 |
+| Jeff Johnson   | E01579645 | seen | completed |     4 |
+| Necco Johnson  | E01579646 | seen | completed |     0 |
+| Brent Johnson  | E01579647 | temp | temp      |    -1 |
+| Eathan Johnson | E01579648 | temp | temp      |    -1 |
+| Elliot Johnson | E01579649 | temp | temp      |    -1 |
+| Evean Johnson  | E01579650 | temp | temp      |    -1 |
+| Mike Johnson   | E01579651 | temp | temp      |    -1 |
+| Jamie Johnson  | E01579652 | temp | temp      |    -1 |
++----------------+-----------+------+-----------+-------+
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+CREATE TABLE exam (
+  question varchar(256) DEFAULT NULL,
+  answer1 varchar(45) DEFAULT NULL,
+  answer2 varchar(45) DEFAULT NULL,
+  answer3 varchar(45) DEFAULT NULL,
+  answer4 varchar(45) DEFAULT NULL,
+  correct varchar(45) DEFAULT NULL,
+  id int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (id)
+)
+
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| question | varchar(256) | YES  |     | NULL    |                |
+| answer1  | varchar(45)  | YES  |     | NULL    |                |
+| answer2  | varchar(45)  | YES  |     | NULL    |                |
+| answer3  | varchar(45)  | YES  |     | NULL    |                |
+| answer4  | varchar(45)  | YES  |     | NULL    |                |
+| correct  | varchar(45)  | YES  |     | NULL    |                |
+| id       | int          | NO   | PRI | NULL    | auto_increment |
++----------+--------------+------+-----+---------+----------------+
+
++------------------------------------+---------+---------+---------+---------+---------+----+
+| question                           | answer1 | answer2 | answer3 | answer4 | correct | id |
++------------------------------------+---------+---------+---------+---------+---------+----+
+| Most popular programing langugae?  | PYTHON  | JAVA    | C++     | C       | PYTHON  |  1 |
+| Oldest programing language?        | C++     | JAVA    | FORTRAN | C       | FORTRAN |  2 |
+| Which one has a garbage collector? | PYTHON  | JAVA    | C++     | C       | JAVA    |  3 |
+| Which one is a scripting language? | C++     | JAVA    | JS      | C       | JS      |  4 |
+| Which one is not OOP?              | PYTHON  | JAVA    | C++     | C       | C       |  5 |
++------------------------------------+---------+---------+---------+---------+---------+----+
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+CREATE TABLE password (
+  pwd varchar(45) NOT NULL,
+  PRIMARY KEY (pwd)
+)
+
++-----------+
+| pwd       |
++-----------+
+| E01579643 |
++-----------+
+
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| pwd   | varchar(45) | NO   | PRI | NULL    |       |
++-------+-------------+------+-----+---------+-------+

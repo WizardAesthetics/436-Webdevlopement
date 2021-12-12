@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tution Cost</title>
+    <style>
+        body{
+            background-color: brown;
+        }
+        input {
+            margin: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        div
+        {
+            display: block;
+            text-align: center;
+            background-color: cadetblue;
+            height: 400px;
+            padding: 50px;
+            width: 40%;
+            margin: auto;
+        }
+        form
+        {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        } h3{
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>University Coast</h1>
+        <!-- Using post to gather data -->
+        <h3>We are excited that you are thinking about joining our University let us help you figure out the price for your feature!</h3>
+        <form method="post" action="status.php" > 
+            <!-- Gredits -->
+            <input name ='credits' type="number" required>Credits</input><br>
+
+            <input type="submit" value="Next"/><br>
+        </form>
+    </div>  
+</body>  
+</html>

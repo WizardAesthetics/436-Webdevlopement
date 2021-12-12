@@ -1,0 +1,35 @@
+------------------------------------------------------------------------------------------------------
+
+CREATE TABLE users (
+  id varchar(45) NOT NULL,
+  password varchar(45) DEFAULT NULL,
+  name varchar(100) DEFAULT NULL,
+  email varchar(100) DEFAULT NULL,
+  visits int DEFAULT NULL,
+  last varchar(45) DEFAULT NULL,
+  PRIMARY KEY (id)
+)
+
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| id       | varchar(45)  | NO   | PRI | NULL    |       |
+| password | varchar(45)  | YES  |     | NULL    |       |
+| name     | varchar(100) | YES  |     | NULL    |       |
+| email    | varchar(100) | YES  |     | NULL    |       |
+| visits   | int          | YES  |     | NULL    |       |
+| last     | varchar(45)  | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+
++------------+--------------+---------------+--------------------+--------+------------------------+
+| id         | password     | name          | email              | visits | last                   |
++------------+--------------+---------------+--------------------+--------+------------------------+
+|            |              |               |                    |      2 | 11-12-2021 03:31:37 am |
+| E01579643  | @Rustynail10 | Blake Johnson | bjohn136@emich.edu |      3 | 11-12-2021 03:32:46 am |
+| E01579644  | @Rustynail10 | Blake Johnson | bjohn136@emich.edu |      2 | 11-12-2021 03:32:55 am |
+| E01579645  | @Rustynail10 | Kyle Johnson  | Kjohn136@emich.edu |      2 | 11-12-2021 03:33:59 am |
+| E015796450 | @Rustynail10 | Blake Johnson | bjohn136@emich.edu |      0 | 11-12-2021 03:31:57 am |
+| E01579646  | @Rustynail10 | Jeff Johnson  | Jjohn136@emich.edu |      2 | 11-12-2021 03:34:35 am |
++------------+--------------+---------------+--------------------+--------+------------------------+
+
+------------------------------------------------------------------------------------------------------

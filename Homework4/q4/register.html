@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tution Cost</title>
+    <style>
+        body {
+            background-color: brown;
+        }
+
+        input {
+            margin: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #form {
+            display: block;
+            text-align: center;
+            background-color: cadetblue;
+            height: 400px;
+            padding: 50px;
+            width: 40%;
+            margin: auto;
+        }
+
+        form {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        #reg {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='form'>
+        <h1>Register</h1>
+        <!-- Using post to gather data -->
+        <form method="post" action="register.php">
+            <!-- Radio gorup for state -->
+            <input name='ID' type="text" required>ID</input><br>
+            <input name='Password' type="text" required>Password</input><br>
+            <input name='Name' type="text" required>Name</input><br>
+            <input name='Email' type="text" required>Email</input><br>
+
+            <input type="submit" /><br>
+        </form>
+    </div>
+</body>
+
+</html>
